@@ -83,7 +83,6 @@ Make sure your backend (Socket.IO server) is running at http://localhost:5000 or
 ## 📁 Project Structure
 
 ```plaintext
-arduino/
 python/
 
 src/
