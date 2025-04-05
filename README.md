@@ -17,7 +17,7 @@ A real-time location tracking dashboard using **React**, **Mapbox**, and **Socke
 
 ## 📷 Screenshot
 
-![Live Map Preview](./screenshots/map-preview.png) <!-- Replace with your actual screenshot path -->
+![Live Map Preview](./screenshots/screenshot1.png) <!-- Replace with your actual screenshot path -->
 
 ---
 
