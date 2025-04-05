@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.jsx
+import React, { useEffect, useState } from 'react';
+import { io } from "socket.io-client";
+import Map from './Map';
+import styles from './CSS/map.module.css';
+
+const socket = io("localhost:5001");
 
 function App() {
+  const [gpsData, setGpsData] = useState([0,0]);
+
+  useEffect(() => {
+    // alert("connecting")
+    socket.on("connect", () => {
+      console.log("✅ Connected to socket server:", socket.id);
+    });
+  
+    socket.on("gps_data", (data) => {
+      console.log("📡 Received:", data);
+      setGpsData(JSON.parse(data));
+    });
+  
+    // return () => {
+    //   socket.disconnect();
+    // };
+  }, []);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <h1 className={styles.Heading}>Live Devices</h1>
+      <Map lat={gpsData[0]} long={gpsData[1]}></Map>
     </div>
   );
 }

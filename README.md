@@ -1,70 +1,103 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 📍GeoTrack A Realtime GPS Tracking Web App
 
-## Available Scripts
+A real-time location tracking dashboard using **React**, **Mapbox**, and **Socket.IO** to display GPS coordinates from devices like LoRa modules via a serial interface.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 📍 Real-time GPS data rendering  
+- 🔌 Socket.IO integration  
+- 🗺️ Mapbox for interactive map display  
+- ⚛️ Built with React and CSS Modules  
+- 🛠️ Ready for future upgrades (e.g., multiple markers, live routes)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📷 Screenshot
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Live Map Preview](./screenshots/map-preview.png) <!-- Replace with your actual screenshot path -->
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🔗 Live Backend Preview
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You can test it live or contribute to the backend by visiting:  
+👉 [https://github.com/ubaid-patel/GPS-Api](https://github.com/ubaid-patel/GPS-Api)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🛠️ Setup Instructions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> 🧩 Setup may vary depending on your GPS data source or local environment.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### 1. Clone the Frontend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/yourusername/realtime-map-app.git
+cd realtime-map-app
+```
+#### 2. Install dependencies
 
-## Learn More
+```bash
+ npm install
+ ```
+#### 3. Replace your Mapbox Access Token
+Open Map.jsx and replace this line:
+```bash
+mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
+```
+with your own Mapbox token from:
+👉 https://account.mapbox.com/
+#### 4. Run the App
+```bash
+npm start
+```
+The app will be live at: http://localhost:3000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Make sure your backend (Socket.IO server) is running at http://localhost:5000 or update the endpoint accordingly.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## 📦 Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **React**
+- **Socket.IO**
+- **Mapbox GL JS**
+- **CSS Modules**
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🧠 To-Do / Future Improvements
 
-### Making a Progressive Web App
+- 🧭 **Multiple markers support**  
+- 📌 **Custom marker icons**  
+- 🛣️ **Route tracking**  
+- 📊 **Device status display**  
+- 🕵️ **Device search & filtering**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```plaintext
+arduino/
+python/
 
-### Deployment
+src/
+├── App.jsx
+├── Map.jsx
+├── CSS/
+│   └── map.module.css
+└── index.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+----
+📝 License
+MIT – Free to use, modify, and contribute.
+
+Made with 💻 + ❤️ by Ubaid Patel
