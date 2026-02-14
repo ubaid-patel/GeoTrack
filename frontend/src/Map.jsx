@@ -4,7 +4,7 @@ import styles from './CSS/map.module.css';
 import 'mapbox-gl/dist/mapbox-gl.css'; // ✅ required
 
 //Mapbox Api Token
-mapboxgl.accessToken = 'pk.eyJ1IjoidWJhaWRwYXRlbDU5NSIsImEiOiJjbHU1ZGFxczYwdmZpMmpuNHljZHlibnB6In0.zMVbPdsglTT36MyuHzTfHQ';
+mapboxgl.accessToken = '<mapbox api token>';
 
 const Map = ({ lat = 28.6565, long = 77.2429 }) => {
   const mapRef = useRef(null);
